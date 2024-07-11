@@ -7,7 +7,6 @@ import java.util.HashSet;
 public class assign21 {
 
 	    public static boolean isSubset(int[] arr1, int[] arr2) {
-	        // Convert arr2 to a HashSet for O(1) average time complexity lookups
 	        HashSet<Integer> set = new HashSet<>();
 	        for (int num : arr2) {
 	            set.add(num);
