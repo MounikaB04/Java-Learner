@@ -5,12 +5,10 @@ import java.util.Arrays;
 
 public class assign23 {
 	public static int minSumOfAbsoluteDifference(int[] nums) {
-		Arrays.sort(nums); // Sort the array
+		Arrays.sort(nums); 
 
 		int n = nums.length;
 		int[] result = new int[n];
-
-		// Rearrange the array to minimize absolute differences
 		int left = 0, right = n - 1;
 		for (int i = 0; i < n; i++) {
 			if (i % 2 == 0) {
@@ -19,8 +17,6 @@ public class assign23 {
 				result[i] = nums[right--];
 			}
 		}
-
-		// Calculate the minimum sum of absolute differences
 		int minSum = 0;
 		for (int i = 0; i < n - 1; i++) {
 			minSum += Math.abs(result[i] - result[i + 1]);
